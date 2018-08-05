@@ -1,12 +1,13 @@
 LIMO.namespace('MYAPP.VIEWS.INDEX')(function(ns){
   ns.init = function(){
     $(function(){
-      // 大抵はコンポーネントのルートになるCSSセレクタを指定する
       // クラスっぽくしているが、簡単ならもちろん関数でも良い。
+      // 大抵はコンポーネントのルートになるCSSセレクタを指定する。
       var popupper = new MYAPP.COMPONENTS.Popupper('.mytrigger');
       popupper.setup();
 
-      // それぞれの状態を持っている同じ型のコンポーネント
+
+      // 同じ型のコンポーネントを呼んでもそれぞれの状態を持っているので混乱しない。
 
       var counter1 = new MYAPP.COMPONENTS.Counter('.counter');
       counter1.setup();

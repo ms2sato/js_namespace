@@ -1,3 +1,4 @@
+// ネームスペースを指定して、外に露出させない
 LIMO.namespace('MYAPP.COMPONENTS')(function(ns){
 
   function Popupper(el){
@@ -13,5 +14,6 @@ LIMO.namespace('MYAPP.COMPONENTS')(function(ns){
     });
   }
 
+  // ns に付けたものはネームスペースに結合されて公開される
   ns.Popupper = Popupper;
 });

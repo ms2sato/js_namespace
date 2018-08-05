@@ -1,3 +1,4 @@
+// ネームスペースを指定して、外に露出させない
 LIMO.namespace('MYAPP.COMPONENTS')(function(ns){
 
   function Counter(el) {
@@ -9,6 +10,7 @@ LIMO.namespace('MYAPP.COMPONENTS')(function(ns){
     var self = this;
 
     // privateメソッドにしたければこの辺とか？
+    // こだわらない方は好きなようにやって良いと思います。
     function update() {
       self.$el.find('.count').text(self.count);
     }
@@ -37,5 +39,6 @@ LIMO.namespace('MYAPP.COMPONENTS')(function(ns){
     update();
   }
 
+  // ns に付けたものはネームスペースに結合されて公開される
   ns.Counter = Counter;
 });
